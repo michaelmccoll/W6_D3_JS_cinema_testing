@@ -34,8 +34,8 @@ Cinema.prototype.checkLength = function(length) {
 }
 
 Cinema.prototype.totalTime = function() {
-  this.films.reduce((runningTotal,length) => {
-    return runningTotal + length;
-},0);
+  return this.films.reduce((runningTotal,film) => {
+    return runningTotal += film.length;
+  },0);
 }
 module.exports = Cinema;
